@@ -1,0 +1,154 @@
+/* styles.css */
+
+/* Paleta de colores */
+:root {
+  --color-primary: #092635;       /* Azul oscuro */
+  --color-secondary: #1B4242;     /* Verde oscuro */
+  --color-tertiary: #5C8374;      /* Verde medio */
+  --color-quaternary: #9EC8B9;    /* Verde claro */
+  --color-text-light: #FFFFFF;    /* Blanco para texto */
+  --color-text-dark: #000000;     /* Negro para texto */
+  --color-nav-background: #5FD35F; /* Verde claro para la barra de navegación */
+  --color-nav-text: #1B4242;      /* Verde oscuro para texto en la barra de navegación */
+  --color-nav-hover-background: #4CAF50; /* Verde más oscuro para hover */
+  --color-nav-hover-text: #FFFFFF; /* Blanco para texto en hover */
+}
+
+/* Estilo básico */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  margin: 0;
+  padding: 0;
+  padding: 1rem; /* Agregar padding general para la página */
+}
+
+nav {
+  background-color: var(--color-nav-background); /* Color de fondo para la barra de navegación */
+  padding: 1rem;
+  margin-bottom: 1rem; /* Margen en la parte inferior para separación del contenido */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: var(--color-nav-text); /* Color de texto actualizado para la barra de navegación */
+  text-decoration: none;
+  padding: 0.5rem 1rem; /* Agregar padding para mejorar el área clicable */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave para efectos de hover */
+}
+
+nav a:hover {
+  background-color: var(--color-nav-hover-background); /* Fondo para hover */
+  color: var(--color-nav-hover-text); /* Texto para hover */
+  border-radius: 4px; /* Bordes redondeados para el efecto hover */
+}
+
+h1 {
+  color: var(--color-text-light);
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 1rem; /* Margen inferior para separación del contenido */
+}
+
+h2, h3 {
+  color: #092635; /* Azul oscuro por defecto para todos los encabezados */
+  text-align: center; /* Centrar el texto de los encabezados */
+}
+
+/* Encabezado en la sección de Objetivo Profesional */
+section#objetivo h2 {
+  color: var(--color-text-light); /* Blanco para el encabezado en esta sección */
+}
+
+img {
+  max-width: 100%; /* Ajusta el ancho máximo de la imagen al 100% del contenedor */
+  height: auto;    /* Mantiene la proporción de la imagen */
+  display: block;  /* Asegura que la imagen esté en un nuevo bloque para el centrado */
+  margin: 1rem auto;  /* Centra la imagen horizontalmente y agrega margen superior e inferior */
+}
+
+section {
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 8px; /* Bordes redondeados para las secciones */
+}
+
+/* Sección objetivo */
+section#objetivo {
+  background-color: var(--color-secondary);
+  color: var(--color-text-light); /* Texto blanco para la sección */
+}
+
+/* Sección experiencia */
+section#experiencia {
+  background-color: #5C8374; /* Verde medio */
+  color: #FFF; /* Texto blanco */
+}
+
+section#experiencia h2, 
+section#experiencia h3 {
+  color: #FFF; /* Blanco para encabezados en esta sección */
+}
+
+/* Sección educación */
+section#educacion {
+  background-color: #092635; /* Fondo azul oscuro */
+  color: #9EC8B9; /* Texto verde claro */
+}
+
+section#educacion h2, 
+section#educacion h3 {
+  color: #9EC8B9; /* Verde claro para encabezados en esta sección */
+}
+
+p {
+  padding: 0.5rem 0; /* Agregar padding a todos los párrafos */
+}
+
+.informacion-personal p {
+  padding-left: 1rem; /* Agregar padding a la izquierda de los párrafos de Información Personal */
+}
+
+a[href="#informacion"] {
+  display: block;
+  margin-top: 1rem;
+  color: var(--color-text-light);
+  text-decoration: none;
+}
+
+a[href="#informacion"]:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  section {
+    padding: 0.5rem;
+  }
+}
